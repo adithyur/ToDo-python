@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo-container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 350px;
+}
+
+.todo-container h2 {
+    color: #343a40;
+    text-align: center;
+}
+
+.task-list {
+    border-radius: 8px;
+    width: 400px;
+    height: 350px;
+    margin-left: 50px;
+    margin-top: -40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.task-item h3 {
+    margin: 0;
+    color: #343a40;
+}
+
+.task-item p {
+    margin: 5px 0;
+    color: #495057;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form label {
+    font-size: 14px;
+    color: #495057;
+}
+
+.form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.done-form {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.done-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.update-button {
+    background-color: orangered;
+    color: #fff;
+    margin-right: 5px;
+    border: none;
+    padding: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.update-container{
+    margin-top: -500px;
+    margin-left: -300px;
+}
+
+.update-h2 {
+    color: #343a40;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}

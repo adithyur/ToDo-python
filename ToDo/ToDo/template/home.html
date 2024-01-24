@@ -1,0 +1,35 @@
+{% extends 'forms.html' %}
+{% block body %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="main-container">
+        <div class="task-list">
+            {% for i in task %}
+                <div class="task-item">
+                    <h3>{{ i.name }}</h3>
+                    <p>{{ i.dis }}</p>
+                    {{ i.date }}
+                    <form method="post" class="done-form">
+                        {% csrf_token %}
+                        <input type="hidden" name="task_id" value="{{ i.id }}">
+                        <button type="submit" formaction="{% url 'ToDoapp:update' i.id %}" class="update-button">
+                            <i></i> Update
+                        </button>
+                        <button type="submit" formaction="{% url 'ToDoapp:delete' i.id %}" class="done-button">
+                            <i class="bi bi-check"></i> Done
+                        </button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
